@@ -1,5 +1,6 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
+/* https://flatuicolors.com/palette/es */
 :root {
   --color-white: #f7f1e3;
   --color-black: #1e272e;
