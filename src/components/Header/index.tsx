@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import { useSidebar } from '../SidebarContext';
-
 import Icons from '@/assets/icons';
+import ThemeToggle from '../ThemeToggle';
 
 const Header = () => {
   const { toggleSidebar } = useSidebar();
@@ -28,6 +28,9 @@ const Header = () => {
         <h4 className="text-brand-white font-bold md:text-2xl tracking-wide">
           Conhecimento e Saber
         </h4>
+      </div>
+      <div className="w-12 flex justify-end">
+        <ThemeToggle />
       </div>
     </header>
   );

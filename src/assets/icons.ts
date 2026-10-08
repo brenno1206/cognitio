@@ -6,6 +6,7 @@ import {
 } from 'react-icons/tb';
 import { IoCloseCircleSharp } from 'react-icons/io5';
 import { FaRegFolder, FaRegFolderOpen } from 'react-icons/fa';
+import { MdDarkMode, MdLightMode } from 'react-icons/md';
 
 const Icons = {
   OpenSidebarIcon: TbLayoutSidebarLeftExpand,
@@ -15,6 +16,8 @@ const Icons = {
   OpenFolder: FaRegFolderOpen,
   Github: TbBrandGithub,
   Mail: TbMail,
+  Light: MdLightMode,
+  Dark: MdDarkMode,
 };
 
 export default Icons;
