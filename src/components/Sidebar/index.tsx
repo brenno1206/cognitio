@@ -29,7 +29,7 @@ const SideBar = () => {
             onClick={closeSidebar}
             className="text-xl font-bold p-2 rounded = transition-colors cursor-pointer hover:text-gray-300"
           >
-            {<Icons.Close />}
+            {<Icons.Close size={24} />}
           </button>
         </div>
 

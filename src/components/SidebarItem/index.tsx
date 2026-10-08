@@ -4,15 +4,21 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { NavItem } from '@/types/navigation';
 import Icons from '@/assets/icons';
+import { useSidebar } from '../SidebarContext';
 
 export const SidebarItem = ({ item }: { item: NavItem }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const hasChildren = item.subItems && item.subItems.length > 0;
+  const { closeSidebar } = useSidebar();
 
   return (
     <li className="flex flex-col mb-1 text-brand-white">
       <div className="flex items-center justify-between p-2 rounded transition-colors hover:bg-primary-light">
-        <Link href={item.url} className="grow font-medium block">
+        <Link
+          href={item.url}
+          className="grow font-medium block"
+          onClick={() => closeSidebar()}
+        >
           {item.label}
         </Link>
 

@@ -52,12 +52,16 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
       lang="pt-BR"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-background">
         <SidebarProvider>
-          <div className="flex flex-col min-h-screen">
+          <div className="flex flex-col min-h-screen lg:bg-black/5 dark:lg:bg-black/40 transition-colors">
             <Header />
             <Sidebar />
-            <main className="grow">{children}</main>
+            <main className="grow w-full lg:w-[60%] mx-auto bg-background lg:shadow-2xl lg:border-x border-black/10 dark:border-white/5 transition-all">
+              <div className="h-full w-full px-6 py-8 lg:px-12 lg:py-10">
+                {children}
+              </div>
+            </main>
             <Footer />
           </div>
         </SidebarProvider>

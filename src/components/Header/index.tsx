@@ -15,7 +15,7 @@ const Header = () => {
         className="text-brand-white text-3xl p-2 hover:text-gray-300 transition-colors shrink-0 cursor-pointer"
         title="Abrir Menu"
       >
-        {<Icons.OpenSidebarIcon />}
+        {<Icons.OpenSidebarIcon size={32} />}
       </button>
 
       <div className="grow text-center pr-10">
