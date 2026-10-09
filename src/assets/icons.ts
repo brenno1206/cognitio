@@ -7,6 +7,7 @@ import {
 import { IoCloseCircleSharp } from 'react-icons/io5';
 import { FaRegFolder, FaRegFolderOpen } from 'react-icons/fa';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
+import { TbCopy, TbCopyCheckFilled } from 'react-icons/tb';
 
 const Icons = {
   OpenSidebarIcon: TbLayoutSidebarLeftExpand,
@@ -18,6 +19,8 @@ const Icons = {
   Mail: TbMail,
   Light: MdLightMode,
   Dark: MdDarkMode,
+  Copy: TbCopy,
+  Copied: TbCopyCheckFilled,
 };
 
 export default Icons;

@@ -4,6 +4,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { SidebarProvider } from '@/components/SidebarContext';
+import { ThemeProvider } from '@/components/ThemeContext';
 import Sidebar from '@/components/Sidebar';
 
 const geistSans = Geist({
@@ -53,18 +54,20 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background">
-        <SidebarProvider>
-          <div className="flex flex-col min-h-screen lg:bg-black/5 dark:lg:bg-black/40 transition-colors">
-            <Header />
-            <Sidebar />
-            <main className="grow w-full lg:w-[60%] mx-auto bg-background lg:shadow-2xl lg:border-x border-black/10 dark:border-white/5 transition-all">
-              <div className="h-full w-full px-6 py-8 lg:px-12 lg:py-10">
-                {children}
-              </div>
-            </main>
-            <Footer />
-          </div>
-        </SidebarProvider>
+        <ThemeProvider>
+          <SidebarProvider>
+            <div className="flex flex-col min-h-screen lg:bg-black/5 dark:lg:bg-black/40 transition-colors">
+              <Header />
+              <Sidebar />
+              <main className="grow w-full lg:w-[60%] mx-auto bg-background lg:shadow-2xl lg:border-x border-black/10 dark:border-white/5 transition-all">
+                <div className="h-full w-full px-6 py-8 lg:px-12 lg:py-10">
+                  {children}
+                </div>
+              </main>
+              <Footer />
+            </div>
+          </SidebarProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
